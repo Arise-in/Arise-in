@@ -1,0 +1,13 @@
+<svg width="1200" height="110" viewBox="0 0 1200 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wave" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"><animate attributeName="stop-color" values="#38BDF8;#8B5CF6;#F43F5E;#38BDF8" dur="8s" repeatCount="indefinite"/></stop>
+      <stop offset="0.5" stop-color="#8B5CF6"><animate attributeName="stop-color" values="#8B5CF6;#F43F5E;#38BDF8;#8B5CF6" dur="8s" repeatCount="indefinite"/></stop>
+      <stop offset="1" stop-color="#F43F5E"><animate attributeName="stop-color" values="#F43F5E;#38BDF8;#8B5CF6;#F43F5E" dur="8s" repeatCount="indefinite"/></stop>
+    </linearGradient>
+  </defs>
+  <path d="M0 30C180 95 330 5 520 54C705 102 875 12 1200 58V110H0V30Z" fill="url(#wave)" opacity="0.24">
+    <animate attributeName="d" dur="9s" repeatCount="indefinite" values="M0 30C180 95 330 5 520 54C705 102 875 12 1200 58V110H0V30Z;M0 58C190 8 360 102 545 48C740 -8 915 95 1200 34V110H0V58Z;M0 30C180 95 330 5 520 54C705 102 875 12 1200 58V110H0V30Z"/>
+  </path>
+  <path d="M0 60C210 16 350 94 560 54C760 16 955 77 1200 43" stroke="url(#wave)" stroke-width="2" opacity="0.75"/>
+</svg>

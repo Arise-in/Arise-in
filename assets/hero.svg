@@ -1,0 +1,76 @@
+<svg width="1200" height="320" viewBox="0 0 1200 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#070B14"/>
+      <stop offset="0.5" stop-color="#0D1224"/>
+      <stop offset="1" stop-color="#080B12"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="260" y1="40" x2="920" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8">
+        <animate attributeName="stop-color" values="#38BDF8;#8B5CF6;#F43F5E;#38BDF8" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="0.5" stop-color="#8B5CF6">
+        <animate attributeName="stop-color" values="#8B5CF6;#F43F5E;#38BDF8;#8B5CF6" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="1" stop-color="#F43F5E">
+        <animate attributeName="stop-color" values="#F43F5E;#38BDF8;#8B5CF6;#F43F5E" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(600 160) rotate(90) scale(210 560)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6366F1" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#6366F1" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="round"><rect width="1200" height="320" rx="26"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#round)">
+    <rect width="1200" height="320" fill="url(#bg)"/>
+    <rect width="1200" height="320" fill="url(#glow)"/>
+
+    <!-- moving diagonal atmosphere -->
+    <g opacity="0.18">
+      <path d="M-120 310L280 -30" stroke="url(#accent)" stroke-width="2">
+        <animateTransform attributeName="transform" type="translate" values="0 0;150 0;0 0" dur="12s" repeatCount="indefinite"/>
+      </path>
+      <path d="M120 350L520 10" stroke="url(#accent)" stroke-width="1.5">
+        <animateTransform attributeName="transform" type="translate" values="0 0;110 0;0 0" dur="10s" repeatCount="indefinite"/>
+      </path>
+      <path d="M830 360L1230 20" stroke="url(#accent)" stroke-width="1.5">
+        <animateTransform attributeName="transform" type="translate" values="0 0;-100 0;0 0" dur="11s" repeatCount="indefinite"/>
+      </path>
+    </g>
+
+    <!-- circuit traces -->
+    <g stroke="#94A3B8" stroke-opacity="0.16" stroke-width="1.4">
+      <path d="M0 78H175L205 108H340"/>
+      <path d="M0 112H130L168 150H300"/>
+      <path d="M900 62H1040L1080 102H1200"/>
+      <path d="M865 238H1015L1060 195H1200"/>
+      <path d="M0 256H185L225 215H330"/>
+    </g>
+
+    <!-- animated signal nodes -->
+    <g fill="url(#accent)" filter="url(#softGlow)">
+      <circle r="4"><animateMotion dur="5s" repeatCount="indefinite" path="M0 78H175L205 108H340"/></circle>
+      <circle r="3"><animateMotion dur="6.5s" repeatCount="indefinite" path="M900 62H1040L1080 102H1200"/></circle>
+      <circle r="3.5"><animateMotion dur="7s" repeatCount="indefinite" path="M0 256H185L225 215H330"/></circle>
+    </g>
+
+    <rect x="60" y="48" width="1080" height="224" rx="22" stroke="url(#accent)" stroke-opacity="0.42"/>
+
+    <text x="600" y="125" fill="#F8FAFC" text-anchor="middle" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="44" font-weight="800" letter-spacing="3">ANKIT MOHAPATRA</text>
+    <rect x="372" y="145" width="456" height="3" rx="1.5" fill="url(#accent)" filter="url(#softGlow)">
+      <animate attributeName="width" values="160;456;160" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="520;372;520" dur="5s" repeatCount="indefinite"/>
+    </rect>
+    <text x="600" y="190" fill="#CBD5E1" text-anchor="middle" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="21" font-weight="600" letter-spacing="1.1">DEVELOPER • CREATOR • TECH ENTHUSIAST</text>
+    <text x="600" y="228" fill="#94A3B8" text-anchor="middle" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="16" letter-spacing="0.7">Electrical Engineering × Software × Electronics × Anime × Chess</text>
+
+    <circle cx="1110" cy="60" r="4" fill="#38BDF8"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.2s" repeatCount="indefinite"/></circle>
+    <circle cx="90" cy="245" r="3" fill="#F43F5E"><animate attributeName="opacity" values="1;0.2;1" dur="2.8s" repeatCount="indefinite"/></circle>
+  </g>
+</svg>
